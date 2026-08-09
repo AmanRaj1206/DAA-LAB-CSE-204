@@ -33,7 +33,7 @@ int main() {
     printf("\nEnter element to search: ");
     scanf("%d", &key);
 
-    // Binary Search
+    // Binary Search-
     int beg = 0;
     int end = N - 1;
 
