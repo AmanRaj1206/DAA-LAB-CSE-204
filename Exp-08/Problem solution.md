@@ -47,41 +47,53 @@ At each step, combine the two nodes with the smallest frequencies. The frequency
 
 ### Final Huffman Tree
 
+### Final Huffman Tree
+
+*Left branch = 0 | Right branch = 1*
+
 ```mermaid
-%%{init: {"flowchart": {"nodeSpacing": 20, "rankSpacing": 25, "padding": 4, "htmlLabels": true}}}%%
-flowchart TD
-    R(("100"))
+%%{init: {"flowchart": {"nodeSpacing": 12, "rankSpacing": 18, "padding": 2, "htmlLabels": true, "curve": "linear"}, "themeVariables": {"fontSize": "11px"}}}%%
+flowchart TB
+    R["100"]
+    N42["42"]
+    N58["58"]
+    N20["20"]
+    T["t: 22"]
+    E["e: 10"]
+    S["s: 10"]
+    N23["23"]
+    N35["35"]
+    C["c: 11"]
+    N12["12"]
+    N4["4"]
+    M["m: 8"]
+    D["d: 2"]
+    U["u: 2"]
+    O["o: 15"]
+    A["a: 20"]
 
-    R -->|0| N42(("42"))
-    R -->|1| N58(("58"))
+    R -->|0| N42
+    R -->|1| N58
+    N42 -->|0| N20
+    N42 -->|1| T
+    N20 -->|0| E
+    N20 -->|1| S
+    N58 -->|0| N23
+    N58 -->|1| N35
+    N23 -->|0| C
+    N23 -->|1| N12
+    N12 -->|0| N4
+    N12 -->|1| M
+    N4 -->|0| D
+    N4 -->|1| U
+    N35 -->|0| O
+    N35 -->|1| A
 
-    N42 -->|0| N20(("20"))
-    N42 -->|1| T["t : 22"]
+    classDef internal fill:#DCEBFA,stroke:#245A91,color:#15324F,stroke-width:1px;
+    classDef leaf fill:#DDF3E4,stroke:#27834A,color:#164D2C,stroke-width:1px;
 
-    N20 -->|0| E["e : 10"]
-    N20 -->|1| S["s : 10"]
-
-    N58 -->|0| N23(("23"))
-    N58 -->|1| N35(("35"))
-
-    N23 -->|0| C["c : 11"]
-    N23 -->|1| N12(("12"))
-
-    N12 -->|0| N4(("4"))
-    N12 -->|1| M["m : 8"]
-
-    N4 -->|0| D["d : 2"]
-    N4 -->|1| U["u : 2"]
-
-    N35 -->|0| O["o : 15"]
-    N35 -->|1| A["a : 20"]
-
-    classDef internal fill:#DCEBFA,stroke:#245A91,stroke-width:1px,color:#15324F;
-    classDef leaf fill:#DDF3E4,stroke:#27834A,stroke-width:1px,color:#164D2C;
-
-    class R,N42,N58,N20,N23,N12,N4,N35 internal;
+    class R,N42,N58,N20,N23,N35,N12,N4 internal;
     class T,E,S,C,M,D,U,O,A leaf;
-
     linkStyle default stroke:#64748B,stroke-width:1px;
 ```
 
