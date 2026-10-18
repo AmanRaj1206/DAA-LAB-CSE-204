@@ -45,7 +45,10 @@ At each step, combine the two nodes with the smallest frequencies. The frequency
 
 **Convention:** A left branch represents `0`, and a right branch represents `1`.
 
+### Final Huffman Tree
+
 ```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 20, "rankSpacing": 25, "padding": 4, "htmlLabels": true}}}%%
 flowchart TD
     R(("100"))
 
@@ -73,13 +76,13 @@ flowchart TD
     N35 -->|0| O["o : 15"]
     N35 -->|1| A["a : 20"]
 
-    classDef internal fill:#DCEBFA,stroke:#245A91,stroke-width:2px,color:#15324F;
-    classDef leaf fill:#DDF3E4,stroke:#27834A,stroke-width:2px,color:#164D2C;
+    classDef internal fill:#DCEBFA,stroke:#245A91,stroke-width:1px,color:#15324F;
+    classDef leaf fill:#DDF3E4,stroke:#27834A,stroke-width:1px,color:#164D2C;
 
     class R,N42,N58,N20,N23,N12,N4,N35 internal;
     class T,E,S,C,M,D,U,O,A leaf;
 
-    linkStyle default stroke:#64748B,stroke-width:2px;
+    linkStyle default stroke:#64748B,stroke-width:1px;
 ```
 
 ---
