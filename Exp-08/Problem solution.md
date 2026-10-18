@@ -166,4 +166,4 @@ The encoded character data requires:
 - **Encoded size:** 29,400 bits
 - **Memory required:** 3,675 bytes
 
-This calculation excludes storage for the Huffman tree, code table and other metadata.
+
